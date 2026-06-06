@@ -1,0 +1,20 @@
+{
+  "name": "gym",
+  "version": "1.0.0",
+  "description": "MVP de sistema de gestión para gimnasios con seguimiento de clientes, planes de entrenamiento y progreso.",
+  "main": "import-schema.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@directus/sdk": "^20.3.0",
+    "@vitalets/google-translate-api": "^9.2.1",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "form-data": "^4.0.5",
+    "js-yaml": "^4.1.1"
+  }
+}

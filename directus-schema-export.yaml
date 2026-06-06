@@ -1,0 +1,3083 @@
+version: 1
+directus: 11.13.4
+vendor: postgres
+collections:
+  - collection: clientes
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: clientes
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: person
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: clientes
+  - collection: ejercicios
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: ejercicios
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: fitness_center
+      item_duplication_fields: null
+      note: Biblioteca de ejercicios reutilizables
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: ejercicios
+  - collection: ejercicios_plan
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: ejercicios_plan
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: fitness_center
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: ejercicios_plan
+  - collection: entrenadores
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: entrenadores
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: fitness_center
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: entrenadores
+  - collection: metricas_cliente
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: metricas_cliente
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: analytics
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: metricas_cliente
+  - collection: plan_ejercicios
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: plan_ejercicios
+      color: null
+      display_template: '{{nombre}}'
+      group: null
+      hidden: false
+      icon: list
+      item_duplication_fields: null
+      note: Ejercicios de cada plan
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+  - collection: planes
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: planes
+      color: null
+      display_template: '{{nombre}}'
+      group: null
+      hidden: false
+      icon: fitness_center
+      item_duplication_fields: null
+      note: Planes de entrenamiento
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: planes
+  - collection: planes_entrenadores
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: planes_entrenadores
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: planes_entrenadores
+  - collection: sesiones_registro
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: sesiones_registro
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: local_fire_department
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: sesiones_registro
+  - collection: suscripciones
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: suscripciones
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: suscripciones
+fields:
+  - collection: clientes
+    field: id
+    type: integer
+    meta:
+      collection: clientes
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: numeric
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: clientes
+      data_type: integer
+      default_value: nextval('clientes_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: clientes
+    field: fecha_nacimiento
+    type: date
+    meta:
+      collection: clientes
+      conditions: null
+      display: null
+      display_options: null
+      field: fecha_nacimiento
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: fecha_nacimiento
+      table: clientes
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: clientes
+    field: objetivo
+    type: string
+    meta:
+      collection: clientes
+      conditions: null
+      display: null
+      display_options: null
+      field: objetivo
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: objetivo
+      table: clientes
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: clientes
+    field: altura_cm
+    type: integer
+    meta:
+      collection: clientes
+      conditions: null
+      display: null
+      display_options: null
+      field: altura_cm
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: altura_cm
+      table: clientes
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: clientes
+    field: user_id
+    type: uuid
+    meta:
+      collection: clientes
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{first_name}} {{last_name}}'
+      field: user_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{first_name}} {{last_name}}'
+      readonly: false
+      required: true
+      searchable: true
+      sort: 1
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: user_id
+      table: clientes
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: clientes
+    field: entrenador_asignado
+    type: integer
+    meta:
+      collection: clientes
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{user_id.first_name}} {{user_id.last_name}}'
+      field: entrenador_asignado
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{user_id.first_name}} {{user_id.last_name}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: entrenador_asignado
+      table: clientes
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: entrenadores
+      foreign_key_column: id
+  - collection: clientes
+    field: peso_kg
+    type: float
+    meta:
+      collection: clientes
+      conditions: null
+      display: null
+      display_options: null
+      field: peso_kg
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: peso_kg
+      table: clientes
+      data_type: real
+      default_value: null
+      max_length: null
+      numeric_precision: 24
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios
+    field: id
+    type: uuid
+    meta:
+      collection: ejercicios
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: ejercicios
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios
+    field: nombre
+    type: string
+    meta:
+      collection: ejercicios
+      conditions: null
+      display: null
+      display_options: null
+      field: nombre
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: nombre
+      table: ejercicios
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios
+    field: descripcion
+    type: text
+    meta:
+      collection: ejercicios
+      conditions: null
+      display: null
+      display_options: null
+      field: descripcion
+      group: null
+      hidden: false
+      interface: input-rich-text-html
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: descripcion
+      table: ejercicios
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios
+    field: categoria
+    type: string
+    meta:
+      collection: ejercicios
+      conditions: null
+      display: null
+      display_options: null
+      field: categoria
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Pecho
+            value: pecho
+          - text: Espalda
+            value: espalda
+          - text: Piernas
+            value: piernas
+          - text: Hombros
+            value: hombros
+          - text: Brazos
+            value: brazos
+          - text: Core
+            value: core
+          - text: Cardio
+            value: cardio
+          - text: Funcional
+            value: funcional
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: categoria
+      table: ejercicios
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios
+    field: nivel_dificultad
+    type: string
+    meta:
+      collection: ejercicios
+      conditions: null
+      display: null
+      display_options: null
+      field: nivel_dificultad
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Principiante
+            value: principiante
+          - text: Intermedio
+            value: intermedio
+          - text: Avanzado
+            value: avanzado
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: nivel_dificultad
+      table: ejercicios
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios
+    field: imagen_referencia
+    type: uuid
+    meta:
+      collection: ejercicios
+      conditions: null
+      display: null
+      display_options: null
+      field: imagen_referencia
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: imagen_referencia
+      table: ejercicios
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: ejercicios
+    field: video_referencia
+    type: uuid
+    meta:
+      collection: ejercicios
+      conditions: null
+      display: null
+      display_options: null
+      field: video_referencia
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: video_referencia
+      table: ejercicios
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: ejercicios
+    field: creado_por
+    type: uuid
+    meta:
+      collection: ejercicios
+      conditions: null
+      display: null
+      display_options: null
+      field: creado_por
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: creado_por
+      table: ejercicios
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: ejercicios
+    field: fecha_creacion
+    type: timestamp
+    meta:
+      collection: ejercicios
+      conditions: null
+      display: null
+      display_options: null
+      field: fecha_creacion
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 9
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: fecha_creacion
+      table: ejercicios
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios
+    field: activo
+    type: boolean
+    meta:
+      collection: ejercicios
+      conditions: null
+      display: null
+      display_options: null
+      field: activo
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: activo
+      table: ejercicios
+      data_type: boolean
+      default_value: true
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios
+    field: planes_relacionados
+    type: alias
+    meta:
+      collection: ejercicios
+      conditions: null
+      display: null
+      display_options: null
+      field: planes_relacionados
+      group: null
+      hidden: false
+      interface: list-o2m
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 11
+      special:
+        - o2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: ejercicios_plan
+    field: id
+    type: integer
+    meta:
+      collection: ejercicios_plan
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: ejercicios_plan
+      data_type: integer
+      default_value: nextval('ejercicios_plan_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios_plan
+    field: plan_id
+    type: integer
+    meta:
+      collection: ejercicios_plan
+      conditions: null
+      display: null
+      display_options: null
+      field: plan_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: plan_id
+      table: ejercicios_plan
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: planes
+      foreign_key_column: id
+  - collection: ejercicios_plan
+    field: nombre
+    type: string
+    meta:
+      collection: ejercicios_plan
+      conditions: null
+      display: null
+      display_options: null
+      field: nombre
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: nombre
+      table: ejercicios_plan
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios_plan
+    field: descripcion
+    type: text
+    meta:
+      collection: ejercicios_plan
+      conditions: null
+      display: null
+      display_options: null
+      field: descripcion
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: descripcion
+      table: ejercicios_plan
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios_plan
+    field: series
+    type: integer
+    meta:
+      collection: ejercicios_plan
+      conditions: null
+      display: null
+      display_options: null
+      field: series
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: series
+      table: ejercicios_plan
+      data_type: integer
+      default_value: 3
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios_plan
+    field: repeticiones
+    type: integer
+    meta:
+      collection: ejercicios_plan
+      conditions: null
+      display: null
+      display_options: null
+      field: repeticiones
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: repeticiones
+      table: ejercicios_plan
+      data_type: integer
+      default_value: 12
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios_plan
+    field: duracion_minutos
+    type: integer
+    meta:
+      collection: ejercicios_plan
+      conditions: null
+      display: null
+      display_options: null
+      field: duracion_minutos
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: duracion_minutos
+      table: ejercicios_plan
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios_plan
+    field: orden
+    type: integer
+    meta:
+      collection: ejercicios_plan
+      conditions: null
+      display: null
+      display_options: null
+      field: orden
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: orden
+      table: ejercicios_plan
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: ejercicios_plan
+    field: ejercicio_id
+    type: uuid
+    meta:
+      collection: ejercicios_plan
+      conditions: null
+      display: null
+      display_options: null
+      field: ejercicio_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: Referencia al ejercicio de la biblioteca (opcional)
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: ejercicio_id
+      table: ejercicios_plan
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: ejercicios
+      foreign_key_column: id
+  - collection: entrenadores
+    field: id
+    type: integer
+    meta:
+      collection: entrenadores
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: numeric
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: entrenadores
+      data_type: integer
+      default_value: nextval('entrenadores_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: entrenadores
+    field: certificado
+    type: string
+    meta:
+      collection: entrenadores
+      conditions: null
+      display: null
+      display_options: null
+      field: certificado
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: certificado
+      table: entrenadores
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: entrenadores
+    field: especialidad
+    type: string
+    meta:
+      collection: entrenadores
+      conditions: null
+      display: null
+      display_options: null
+      field: especialidad
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: especialidad
+      table: entrenadores
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: entrenadores
+    field: telefono
+    type: string
+    meta:
+      collection: entrenadores
+      conditions: null
+      display: null
+      display_options: null
+      field: telefono
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: telefono
+      table: entrenadores
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: entrenadores
+    field: user_id
+    type: uuid
+    meta:
+      collection: entrenadores
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{first_name}} {{last_name}}'
+      field: user_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{first_name}} {{last_name}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: user_id
+      table: entrenadores
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: entrenadores
+    field: certificaciones
+    type: text
+    meta:
+      collection: entrenadores
+      conditions: null
+      display: null
+      display_options: null
+      field: certificaciones
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: certificaciones
+      table: entrenadores
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: entrenadores
+    field: anos_experiencia
+    type: string
+    meta:
+      collection: entrenadores
+      conditions: null
+      display: null
+      display_options: null
+      field: anos_experiencia
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: anos_experiencia
+      table: entrenadores
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: entrenadores
+    field: descripcion
+    type: text
+    meta:
+      collection: entrenadores
+      conditions: null
+      display: null
+      display_options: null
+      field: descripcion
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: descripcion
+      table: entrenadores
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: metricas_cliente
+    field: id
+    type: integer
+    meta:
+      collection: metricas_cliente
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: numeric
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: metricas_cliente
+      data_type: integer
+      default_value: nextval('metricas_cliente_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: metricas_cliente
+    field: cliente_id
+    type: uuid
+    meta:
+      collection: metricas_cliente
+      conditions: null
+      display: null
+      display_options: null
+      field: cliente_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 2
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: cliente_id
+      table: metricas_cliente
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: metricas_cliente
+    field: fecha
+    type: date
+    meta:
+      collection: metricas_cliente
+      conditions: null
+      display: null
+      display_options: null
+      field: fecha
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: fecha
+      table: metricas_cliente
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: metricas_cliente
+    field: peso_kg
+    type: decimal
+    meta:
+      collection: metricas_cliente
+      conditions: null
+      display: null
+      display_options: null
+      field: peso_kg
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: peso_kg
+      table: metricas_cliente
+      data_type: numeric
+      default_value: null
+      max_length: null
+      numeric_precision: 5
+      numeric_scale: 2
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: metricas_cliente
+    field: porcentaje_grasa
+    type: decimal
+    meta:
+      collection: metricas_cliente
+      conditions: null
+      display: null
+      display_options: null
+      field: porcentaje_grasa
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: porcentaje_grasa
+      table: metricas_cliente
+      data_type: numeric
+      default_value: null
+      max_length: null
+      numeric_precision: 4
+      numeric_scale: 2
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: metricas_cliente
+    field: masa_muscular_kg
+    type: decimal
+    meta:
+      collection: metricas_cliente
+      conditions: null
+      display: null
+      display_options: null
+      field: masa_muscular_kg
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: masa_muscular_kg
+      table: metricas_cliente
+      data_type: numeric
+      default_value: null
+      max_length: null
+      numeric_precision: 5
+      numeric_scale: 2
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: metricas_cliente
+    field: circunferencia_cintura_cm
+    type: integer
+    meta:
+      collection: metricas_cliente
+      conditions: null
+      display: null
+      display_options: null
+      field: circunferencia_cintura_cm
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: circunferencia_cintura_cm
+      table: metricas_cliente
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: planes
+    field: id
+    type: integer
+    meta:
+      collection: planes
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: numeric
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: planes
+      data_type: integer
+      default_value: nextval('planes_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: planes
+    field: nombre
+    type: string
+    meta:
+      collection: planes
+      conditions: null
+      display: null
+      display_options: null
+      field: nombre
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: nombre
+      table: planes
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: planes
+    field: descripcion
+    type: text
+    meta:
+      collection: planes
+      conditions: null
+      display: null
+      display_options: null
+      field: descripcion
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: descripcion
+      table: planes
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: planes
+    field: duracion_dias
+    type: integer
+    meta:
+      collection: planes
+      conditions: null
+      display: null
+      display_options: null
+      field: duracion_dias
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: duracion_dias
+      table: planes
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: planes
+    field: activo
+    type: boolean
+    meta:
+      collection: planes
+      conditions: null
+      display: null
+      display_options: null
+      field: activo
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: activo
+      table: planes
+      data_type: boolean
+      default_value: true
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: planes
+    field: ejercicios
+    type: alias
+    meta:
+      collection: planes
+      conditions: null
+      display: null
+      display_options: null
+      field: ejercicios
+      group: null
+      hidden: false
+      interface: list-o2m
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special:
+        - o2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: planes
+    field: entrenadores
+    type: alias
+    meta:
+      collection: planes
+      conditions: null
+      display: null
+      display_options: null
+      field: entrenadores
+      group: null
+      hidden: false
+      interface: list-m2m
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special:
+        - m2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: planes_entrenadores
+    field: id
+    type: integer
+    meta:
+      collection: planes_entrenadores
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: planes_entrenadores
+      data_type: integer
+      default_value: nextval('planes_entrenadores_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: planes_entrenadores
+    field: planes_id
+    type: integer
+    meta:
+      collection: planes_entrenadores
+      conditions: null
+      display: null
+      display_options: null
+      field: planes_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: planes_id
+      table: planes_entrenadores
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: planes
+      foreign_key_column: id
+  - collection: planes_entrenadores
+    field: entrenadores_id
+    type: integer
+    meta:
+      collection: planes_entrenadores
+      conditions: null
+      display: null
+      display_options: null
+      field: entrenadores_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: entrenadores_id
+      table: planes_entrenadores
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: entrenadores
+      foreign_key_column: id
+  - collection: sesiones_registro
+    field: id
+    type: integer
+    meta:
+      collection: sesiones_registro
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: numeric
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: sesiones_registro
+      data_type: integer
+      default_value: nextval('sesiones_registro_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: sesiones_registro
+    field: fecha
+    type: date
+    meta:
+      collection: sesiones_registro
+      conditions: null
+      display: null
+      display_options: null
+      field: fecha
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: fecha
+      table: sesiones_registro
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: sesiones_registro
+    field: horas_entrenadas
+    type: decimal
+    meta:
+      collection: sesiones_registro
+      conditions: null
+      display: null
+      display_options: null
+      field: horas_entrenadas
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: horas_entrenadas
+      table: sesiones_registro
+      data_type: numeric
+      default_value: null
+      max_length: null
+      numeric_precision: 4
+      numeric_scale: 2
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: sesiones_registro
+    field: tipo_entrenamiento
+    type: string
+    meta:
+      collection: sesiones_registro
+      conditions: null
+      display: null
+      display_options: null
+      field: tipo_entrenamiento
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: tipo_entrenamiento
+      table: sesiones_registro
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: sesiones_registro
+    field: notas
+    type: text
+    meta:
+      collection: sesiones_registro
+      conditions: null
+      display: null
+      display_options: null
+      field: notas
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: notas
+      table: sesiones_registro
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: sesiones_registro
+    field: cliente_id
+    type: integer
+    meta:
+      collection: sesiones_registro
+      conditions: null
+      display: null
+      display_options: null
+      field: cliente_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{user_id.first_name}} {{user_id.last_name}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: cliente_id
+      table: sesiones_registro
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: clientes
+      foreign_key_column: id
+  - collection: suscripciones
+    field: id
+    type: integer
+    meta:
+      collection: suscripciones
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: suscripciones
+      data_type: integer
+      default_value: nextval('suscripciones_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: suscripciones
+    field: cliente_id
+    type: integer
+    meta:
+      collection: suscripciones
+      conditions: null
+      display: null
+      display_options: null
+      field: cliente_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: {}
+      readonly: false
+      required: true
+      searchable: true
+      sort: 2
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: cliente_id
+      table: suscripciones
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: clientes
+      foreign_key_column: id
+  - collection: suscripciones
+    field: plan_id
+    type: integer
+    meta:
+      collection: suscripciones
+      conditions: null
+      display: null
+      display_options: null
+      field: plan_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: plan_id
+      table: suscripciones
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: planes
+      foreign_key_column: id
+  - collection: suscripciones
+    field: fecha_inicio
+    type: dateTime
+    meta:
+      collection: suscripciones
+      conditions: null
+      display: null
+      display_options: null
+      field: fecha_inicio
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: fecha_inicio
+      table: suscripciones
+      data_type: timestamp without time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: suscripciones
+    field: fecha_fin
+    type: dateTime
+    meta:
+      collection: suscripciones
+      conditions: null
+      display: null
+      display_options: null
+      field: fecha_fin
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: fecha_fin
+      table: suscripciones
+      data_type: timestamp without time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: suscripciones
+    field: habilitado
+    type: boolean
+    meta:
+      collection: suscripciones
+      conditions: null
+      display: null
+      display_options: null
+      field: habilitado
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: habilitado
+      table: suscripciones
+      data_type: boolean
+      default_value: true
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+systemFields:
+  - collection: directus_activity
+    field: timestamp
+    schema:
+      is_indexed: true
+  - collection: directus_revisions
+    field: parent
+    schema:
+      is_indexed: true
+relations:
+  - collection: clientes
+    field: user_id
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: clientes
+      many_field: user_id
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: clientes
+      column: user_id
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: clientes_user_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: clientes
+    field: entrenador_asignado
+    related_collection: entrenadores
+    meta:
+      junction_field: null
+      many_collection: clientes
+      many_field: entrenador_asignado
+      one_allowed_collections: null
+      one_collection: entrenadores
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: clientes
+      column: entrenador_asignado
+      foreign_key_table: entrenadores
+      foreign_key_column: id
+      constraint_name: clientes_entrenador_asignado_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: ejercicios
+    field: imagen_referencia
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: ejercicios
+      many_field: imagen_referencia
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: ejercicios
+      column: imagen_referencia
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: ejercicios_imagen_referencia_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: ejercicios
+    field: video_referencia
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: ejercicios
+      many_field: video_referencia
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: ejercicios
+      column: video_referencia
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: ejercicios_video_referencia_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: ejercicios
+    field: creado_por
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: ejercicios
+      many_field: creado_por
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: ejercicios
+      column: creado_por
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: ejercicios_creado_por_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: ejercicios_plan
+    field: plan_id
+    related_collection: planes
+    meta:
+      junction_field: null
+      many_collection: ejercicios_plan
+      many_field: plan_id
+      one_allowed_collections: null
+      one_collection: planes
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: ejercicios
+      sort_field: orden
+    schema:
+      table: ejercicios_plan
+      column: plan_id
+      foreign_key_table: planes
+      foreign_key_column: id
+      constraint_name: ejercicios_plan_plan_id_foreign
+      on_update: NO ACTION
+      on_delete: CASCADE
+  - collection: ejercicios_plan
+    field: ejercicio_id
+    related_collection: ejercicios
+    meta:
+      junction_field: null
+      many_collection: ejercicios_plan
+      many_field: ejercicio_id
+      one_allowed_collections: null
+      one_collection: ejercicios
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: planes_relacionados
+      sort_field: null
+    schema:
+      table: ejercicios_plan
+      column: ejercicio_id
+      foreign_key_table: ejercicios
+      foreign_key_column: id
+      constraint_name: ejercicios_plan_ejercicio_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: entrenadores
+    field: user_id
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: entrenadores
+      many_field: user_id
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: entrenadores
+      column: user_id
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: entrenadores_user_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: planes_entrenadores
+    field: entrenadores_id
+    related_collection: entrenadores
+    meta:
+      junction_field: planes_id
+      many_collection: planes_entrenadores
+      many_field: entrenadores_id
+      one_allowed_collections: null
+      one_collection: entrenadores
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: planes_entrenadores
+      column: entrenadores_id
+      foreign_key_table: entrenadores
+      foreign_key_column: id
+      constraint_name: planes_entrenadores_entrenadores_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: planes_entrenadores
+    field: planes_id
+    related_collection: planes
+    meta:
+      junction_field: entrenadores_id
+      many_collection: planes_entrenadores
+      many_field: planes_id
+      one_allowed_collections: null
+      one_collection: planes
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: entrenadores
+      sort_field: null
+    schema:
+      table: planes_entrenadores
+      column: planes_id
+      foreign_key_table: planes
+      foreign_key_column: id
+      constraint_name: planes_entrenadores_planes_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: sesiones_registro
+    field: cliente_id
+    related_collection: clientes
+    meta:
+      junction_field: null
+      many_collection: sesiones_registro
+      many_field: cliente_id
+      one_allowed_collections: null
+      one_collection: clientes
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: sesiones_registro
+      column: cliente_id
+      foreign_key_table: clientes
+      foreign_key_column: id
+      constraint_name: sesiones_registro_cliente_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: suscripciones
+    field: cliente_id
+    related_collection: clientes
+    meta:
+      junction_field: null
+      many_collection: suscripciones
+      many_field: cliente_id
+      one_allowed_collections: null
+      one_collection: clientes
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: suscripciones
+      column: cliente_id
+      foreign_key_table: clientes
+      foreign_key_column: id
+      constraint_name: suscripciones_cliente_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: suscripciones
+    field: plan_id
+    related_collection: planes
+    meta:
+      junction_field: null
+      many_collection: suscripciones
+      many_field: plan_id
+      one_allowed_collections: null
+      one_collection: planes
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: suscripciones
+      column: plan_id
+      foreign_key_table: planes
+      foreign_key_column: id
+      constraint_name: suscripciones_plan_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
